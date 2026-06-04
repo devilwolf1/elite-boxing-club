@@ -11,15 +11,15 @@ function Coaches() {
         copy="Our coaches help beginners build clean habits and experienced members refine the details that matter when fatigue sets in."
       />
       <CoachCards showHeader={false} />
-      <section className="bg-[#050505] px-4 py-20 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-3">
+      <section className="section-band px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+        <div className="relative mx-auto grid max-w-7xl gap-10 lg:grid-cols-3">
           <div className="lg:col-span-1">
-            <p className="text-sm font-black text-[#d7b46a]">Coaching philosophy</p>
-            <h2 className="mt-4 text-3xl font-black text-white sm:text-4xl">
+            <p className="premium-eyebrow">Coaching philosophy</p>
+            <h2 className="mt-4 text-3xl font-black leading-tight text-white sm:text-4xl">
               Clear feedback. Controlled intensity. Real progress.
             </h2>
           </div>
-          <div className="grid gap-5 text-base leading-8 text-stone-400 lg:col-span-2">
+          <div className="surface-card grid gap-5 p-7 text-base leading-8 text-stone-400 lg:col-span-2">
             <p>
               Every member is coached through the same progression: stance, balance,
               guard, punch mechanics, defense, then pressure. We do not rush sparring,

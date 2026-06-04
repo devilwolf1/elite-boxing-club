@@ -7,28 +7,30 @@ function Navbar() {
 
   const navLinkClass = ({ isActive }) =>
     [
-      'rounded-full px-4 py-2 text-sm font-semibold transition duration-300',
-      'hover:bg-white/10 hover:text-[#f4d58b] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d7b46a]',
-      isActive ? 'bg-[#d7b46a] text-black' : 'text-stone-200',
+      'relative rounded-[4px] px-4 py-2.5 text-sm font-extrabold transition duration-300',
+      'hover:bg-white/[0.07] hover:text-[#f4d58b] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d7b46a]',
+      isActive
+        ? 'bg-white/[0.08] text-[#f4d58b] shadow-[inset_0_-1px_0_#d7b46a]'
+        : 'text-stone-300',
     ].join(' ')
 
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-black/85 backdrop-blur-xl">
+    <header className="sticky top-0 z-40 border-b border-white/10 bg-[#050505]/90 shadow-[0_12px_45px_rgba(0,0,0,0.28)] backdrop-blur-xl">
       <nav
         aria-label="Main navigation"
-        className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+        className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3.5 sm:px-6 lg:px-8"
       >
         <Link
           to="/"
-          className="group inline-flex items-center gap-3 rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d7b46a]"
+          className="group inline-flex items-center gap-3 rounded-[4px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d7b46a]"
           aria-label="Elite Boxing Club home"
         >
-          <span className="grid h-11 w-11 place-items-center border border-[#d7b46a] bg-[#d7b46a] text-lg font-black text-black transition duration-300 group-hover:bg-black group-hover:text-[#d7b46a]">
+          <span className="grid h-11 w-11 place-items-center rounded-[4px] border border-[#d7b46a] bg-[#d7b46a] text-lg font-black text-black shadow-[0_12px_34px_rgba(215,180,106,0.2)] transition duration-300 group-hover:bg-black group-hover:text-[#d7b46a]">
             EB
           </span>
           <span className="flex flex-col leading-tight">
             <span className="text-base font-black text-white">Elite Boxing</span>
-            <span className="text-xs font-semibold text-[#d7b46a]">Club</span>
+            <span className="text-xs font-bold text-[#d7b46a]">Club</span>
           </span>
         </Link>
 
@@ -42,14 +44,14 @@ function Navbar() {
 
         <Link
           to="/contact"
-          className="hidden border border-[#d7b46a] px-5 py-3 text-sm font-bold text-[#f4d58b] transition duration-300 hover:bg-[#d7b46a] hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d7b46a] lg:inline-flex"
+          className="btn-secondary hidden lg:inline-flex"
         >
           Book a Trial
         </Link>
 
         <button
           type="button"
-          className="grid h-11 w-11 place-items-center border border-white/15 text-white transition hover:border-[#d7b46a] hover:text-[#f4d58b] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d7b46a] lg:hidden"
+          className="grid h-11 w-11 place-items-center rounded-[4px] border border-white/15 bg-white/[0.03] text-white transition hover:border-[#d7b46a] hover:text-[#f4d58b] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d7b46a] lg:hidden"
           aria-label={open ? 'Close navigation menu' : 'Open navigation menu'}
           aria-expanded={open}
           onClick={() => setOpen((current) => !current)}
@@ -63,8 +65,8 @@ function Navbar() {
       </nav>
 
       <div
-        className={`border-t border-white/10 bg-black/95 px-4 py-4 transition lg:hidden ${
-          open ? 'block' : 'hidden'
+        className={`border-t border-white/10 bg-[#050505]/95 px-4 py-4 shadow-[0_24px_60px_rgba(0,0,0,0.32)] transition lg:hidden ${
+          open ? 'block animate-fade-in-up' : 'hidden'
         }`}
       >
         <div className="mx-auto grid max-w-7xl gap-2">
@@ -76,7 +78,7 @@ function Navbar() {
           <Link
             to="/contact"
             onClick={() => setOpen(false)}
-            className="mt-2 bg-[#d7b46a] px-5 py-3 text-center text-sm font-black text-black transition hover:bg-[#f4d58b] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d7b46a]"
+            className="btn-primary mt-2"
           >
             Book a Trial
           </Link>

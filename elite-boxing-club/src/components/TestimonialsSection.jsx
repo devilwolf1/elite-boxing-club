@@ -3,8 +3,8 @@ import SectionHeader from './SectionHeader.jsx'
 
 function TestimonialsSection() {
   return (
-    <section className="bg-[#0a0a0a] px-4 py-20 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
+    <section className="section-band-alt px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+      <div className="relative mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="Member results"
           title="A sharper standard than the average boxing gym."
@@ -12,12 +12,14 @@ function TestimonialsSection() {
         />
 
         <div className="mt-12 grid gap-5 lg:grid-cols-3">
-          {testimonials.map((testimonial) => (
+          {testimonials.map((testimonial, index) => (
             <figure
               key={testimonial.name}
-              className="border border-white/10 bg-[#050505] p-7 transition duration-300 hover:border-[#d7b46a]"
+              className="surface-card animate-fade-in-up p-7 transition duration-300 hover:-translate-y-1 hover:border-[#d7b46a]"
+              style={{ animationDelay: `${index * 90}ms` }}
             >
-              <blockquote className="text-lg leading-8 text-stone-200">
+              <div className="mb-6 h-px w-14 bg-[#d7b46a]" aria-hidden="true" />
+              <blockquote className="text-lg leading-8 text-stone-200 sm:leading-9">
                 "{testimonial.quote}"
               </blockquote>
               <figcaption className="mt-8 border-t border-white/10 pt-5">

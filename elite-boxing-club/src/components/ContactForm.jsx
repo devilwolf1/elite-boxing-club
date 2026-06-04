@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 const fieldClass =
-  'mt-2 w-full border border-white/10 bg-black px-4 py-3 text-white outline-none transition placeholder:text-stone-600 focus:border-[#d7b46a] focus:ring-2 focus:ring-[#d7b46a]/30'
+  'mt-2 w-full rounded-[4px] border border-white/10 bg-black/70 px-4 py-3.5 text-white outline-none transition placeholder:text-stone-600 focus:border-[#d7b46a] focus:ring-2 focus:ring-[#d7b46a]/30'
 
 function ContactForm() {
   const [submitted, setSubmitted] = useState(false)
@@ -52,7 +52,7 @@ function ContactForm() {
       </label>
       <button
         type="submit"
-        className="bg-[#d7b46a] px-7 py-4 text-sm font-black text-black transition duration-300 hover:bg-[#f4d58b] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d7b46a]"
+        className="btn-primary w-full sm:w-fit"
       >
         Send Inquiry
       </button>

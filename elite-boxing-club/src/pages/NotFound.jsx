@@ -9,17 +9,17 @@ function NotFound() {
         title="This page is outside the ring."
         copy="The page you requested does not exist. Head back to the club homepage or book your first class."
       />
-      <section className="bg-[#050505] px-4 py-20 sm:px-6 lg:px-8">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 sm:flex-row">
+      <section className="section-band px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+        <div className="relative mx-auto flex max-w-7xl flex-col gap-3 sm:flex-row">
           <Link
             to="/"
-            className="bg-[#d7b46a] px-7 py-4 text-center text-sm font-black text-black transition hover:bg-[#f4d58b]"
+            className="btn-primary"
           >
             Go Home
           </Link>
           <Link
             to="/contact"
-            className="border border-[#d7b46a] px-7 py-4 text-center text-sm font-black text-[#f4d58b] transition hover:bg-[#d7b46a] hover:text-black"
+            className="btn-secondary"
           >
             Book a Trial
           </Link>
