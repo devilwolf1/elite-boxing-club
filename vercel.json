@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd elite-boxing-club && npm install && npm run build",
+  "outputDirectory": "elite-boxing-club/dist",
+  "installCommand": "cd elite-boxing-club && npm install",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}
